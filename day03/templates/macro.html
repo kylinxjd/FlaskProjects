@@ -1,0 +1,10 @@
+
+{% macro func(label='', type='text', name='') %}
+    <label>{{ label }}</label>
+    <input type="{{ type }}" name="{{ name }}">
+{% endmacro %}
+
+
+<form>
+    {{ func(label='用户名', name='username') }}
+</form>

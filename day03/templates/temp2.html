@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<h1>asdas</h1>
+{{ str1 }}
+{{ list1 }}
+{{ dict1 }}
+<hr>
+{{ str1 }}
+<hr>
+{% if newlist %}
+    {{ newlist }}
+{% else %}
+    {{ list1 }}
+{% endif %}
+<hr>
+
+{{ dict1.name }}
+{{ dict1.age }}
+
+<hr>
+
+
+{% for item in dict1.values() %}
+{{ item }}
+{% endfor %}
+
+<hr>
+</body>
+</html>

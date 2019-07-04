@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+    <h3>
+        {{ dict_list.1.name }}
+    </h3>
+
+    <p>
+        {% for item in list1 %}
+            {% if item|length > 8 %}
+                {{ item }} <br>
+            {% elif item|length < 6 %}
+                {{ 'wwwwww' }}  <br>
+            {% else %}
+                {{ 'qqqqqq' }}   <br>
+            {% endif %}
+        {% endfor %}
+    </p>
+    <hr>
+    <p>
+
+        {{ list2|sum }}
+
+{#        {% for dict_item in dict_list %}#}
+{#            {{  }}#}
+{#        {% endfor %}#}
+
+        {{ dict_list|sum(attribute='age') }}
+
+        {{ dict_list|dictsum('age') }}
+
+
+    </p>
+    <hr>
+<p>
+    {{ '<b>hello</b>'|safe }}
+</p>
+
+<p>
+    {% for item in list3 %}
+        {{ item }}
+    {% else %}
+        {{ 'llllllllllllll' }}
+    {% endfor %}
+
+</p>
+
+</body>
+</html>

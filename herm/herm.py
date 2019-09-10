@@ -31,6 +31,7 @@ migrate = Migrate(app, db)
 class Role(db.Model):
     __tablename__ = 'roles'
 
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), unique=True)
 
@@ -124,6 +125,11 @@ class Register(FlaskForm):
 @app.route('/index')
 def index():
     return "index"
+
+
+@app.route('/index2')
+def index2():
+   return "index2"
 
 
 if __name__ == '__main__':
